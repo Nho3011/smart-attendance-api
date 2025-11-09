@@ -2,11 +2,10 @@
 {
     public class Student
     {
-        public int Student_id { get; set; }
+        public int Id { get; set; }
         public string Code { get; set; } = string.Empty;
         public string Name { get; set; }= string.Empty;
         public string Email {  get; set; } = string.Empty;
-        public string? Face_id {  get; set; }
-        public ICollection<Enrolment> Enrolments { get; set; } = new List<Enrolment>();
-    }
+        public string? FaceId {  get; set; }
+     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\DOANWEB\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {}
+    "C:\\doanNho\\smart-attendance-api\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "C:\\DOANWEB\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {
+    "C:\\doanNho\\smart-attendance-api\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DOANWEB\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "C:\\doanNho\\smart-attendance-api\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "C:\\DOANWEB\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+        "projectPath": "C:\\doanNho\\smart-attendance-api\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\84326\\.nuget\\packages\\",
-        "outputPath": "C:\\DOANWEB\\WebApplication1\\WebApplication1\\obj\\",
+        "outputPath": "C:\\doanNho\\smart-attendance-api\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\84326\\AppData\\Roaming\\NuGet\\NuGet.Config",

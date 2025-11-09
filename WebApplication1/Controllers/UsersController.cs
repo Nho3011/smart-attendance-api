@@ -26,10 +26,9 @@ namespace WebApplication1.Controllers
             var id = await repo.AddAsync(users);
             return Ok(new { id });
         }
-        [HttpPut("{id:int}")]
-        public async Task<IActionResult> Update(int id, Users users)
+        [HttpPut]
+        public async Task<IActionResult> Update(Users users)
         {
-            users.Id = id;
             var rows = await repo.UpdateAsync(users);
             return rows > 0 ? Ok() : NotFound();
         }

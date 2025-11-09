@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VpfZb7a2b2VCgRHuxyzjvBzK/OTjs6qbTOW4gDKc7Fdux10D11LeoY5hdamFo4TU3YP6WGSzAnYHqSepmf2u8w==",
+  "dgSpecHash": "mIPwizjiVZ76007t5CtNqJMs18zl0gAWh170s2rDbMB6aDu0R/qW8pPd0g8ZRX9CNpnWtuAllvUoUarJsGMMbQ==",
   "success": true,
-  "projectFilePath": "C:\\DOANWEB\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+  "projectFilePath": "C:\\doanNho\\smart-attendance-api\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\84326\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\84326\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

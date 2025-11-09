@@ -7,7 +7,7 @@ namespace WebApplication1.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class SessionsControlle(ISessionsRepository repo) : ControllerBase
+    public class SessionsController(ISessionsRepository repo) : ControllerBase
     {
         [HttpGet]
         public async Task<IActionResult> GetAll()
@@ -27,10 +27,9 @@ namespace WebApplication1.Controllers
             var id = await repo.AddAsync(sessions);
             return Ok(new { id });
         }
-        [HttpPut("{id:int}")]
-        public async Task<IActionResult> Update(int id, Sessions sessions)
+        [HttpPut]
+        public async Task<IActionResult> Update(Sessions sessions)
         {
-            sessions.Session_id = id;
             var rows = await repo.UpdateAsync(sessions);
             return rows > 0 ? Ok() : NotFound();
         }

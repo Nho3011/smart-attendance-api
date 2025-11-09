@@ -17,7 +17,7 @@ namespace WebApplication1.Controllers
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var enrolmment=repo.GetByIdAsync(id);
+            var enrolmment= await repo.GetByIdAsync(id);
             return enrolmment==null? NotFound():Ok(enrolmment);
         }
         [HttpPost]
@@ -26,10 +26,9 @@ namespace WebApplication1.Controllers
             var id=await repo.AddAsync(enrolment);
             return Ok(new { id });
         }
-        [HttpPut("{id:int}")]
-        public async Task<IActionResult> Update(int id, Enrolment enrolment)
+        [HttpPut]
+        public async Task<IActionResult> Update(Enrolment enrolment)
         {
-            enrolment.Enrolment_id = id;
             var rows= await repo.UpdateAsync(enrolment);
             return rows>0 ? Ok() : NotFound();
         }

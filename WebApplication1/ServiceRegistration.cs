@@ -8,7 +8,7 @@ namespace WebApplication1
         {
             services.AddTransient<IUsersRepository, UsersRepository>();
             services.AddTransient<IStudentRepository, StudentRepository>();
-            services.AddTransient<ISessionsRepository, SessionsRepositor>();
+            services.AddTransient<ISessionsRepository, SessionsRepository>();
             services.AddTransient<ILecturerRepository, LectureRepository>();
             services.AddTransient<IEnrolmentRepository, EnrolmentRepository>();
             services.AddTransient<ICourseRepository, CourseRepository>();

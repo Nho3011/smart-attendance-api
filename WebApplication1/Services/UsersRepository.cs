@@ -19,19 +19,36 @@ namespace WebApplication1.Services
             var result=await conn.QueryAsync<Users>(sql);
             return result.ToList();
         }
-        public Task<int> AddAsync(Users entity)
+        public async Task<int> AddAsync(Users entity)
         {
-            throw new NotImplementedException();
+            const string sql = @"
+                INSERT INTO users (role, password, email)
+                VALUES (@Role, @Password, @Email)
+                RETURNING id;";
+
+            await using var conn = await dataSource.OpenConnectionAsync();
+            var id = await conn.ExecuteScalarAsync<int>(sql, entity);
+            return id;
         }
 
-        public Task<int> DeleteAsync(int id)
+        public async Task<int> DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            const string sql = "DELETE FROM users WHERE id = @Id;";
+            await using var conn = await dataSource.OpenConnectionAsync();
+            return await conn.ExecuteAsync(sql, new { Id = id });
         }
 
-        public Task<int> UpdateAsync(Users entity)
+        public async Task<int> UpdateAsync(Users entity)
         {
-            throw new NotImplementedException();
+            const string sql = @"
+                UPDATE users
+                SET role = @Role,
+                    password = @Password,
+                    email = @Email
+                WHERE id = @Id;";
+
+            await using var conn = await dataSource.OpenConnectionAsync();
+            return await conn.ExecuteAsync(sql, entity);
         }
     }
 }

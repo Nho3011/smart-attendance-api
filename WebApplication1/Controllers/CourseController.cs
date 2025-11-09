@@ -26,10 +26,9 @@ namespace WebApplication1.Controllers
             var id= await repo.AddAsync(course);
             return Ok(new { id });
         }
-        [HttpPut("{id:int}")]
-        public async Task<IActionResult> Update(int id, Course course)
+        [HttpPut]
+        public async Task<IActionResult> Update(Course course)
         {
-            course.Course_id = id;
             var rows=await repo.UpdateAsync(course);
             return rows>0?Ok():NotFound();
         }
